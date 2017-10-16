@@ -54,11 +54,121 @@
   }
 
   &__item a {
-    display: block;
+    display: none;
 
     background-color: $bg-lightbrown;
     border-bottom: 1px solid $bg-brown;
 
+    color: $color-light;
+    font-weight: 700;
+    text: {
+      transform: uppercase;
+      decoration: none;
+    }
+
     padding: .75em 1.5em;
+
+
+    &[href]:hover {
+      background-color: #755a46;
+    }
+
+
+    &[href]:active {
+      background-color: $bg-brown;
+      color: $bg-lightbrown;
+    }
   }
+
+
+  & .user__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+
+  & .user__item a {
+    display: none;
+
+    background-color: $bg-brown;
+
+    color: $color-light;
+    text-decoration: none;
+
+    padding: .75em 1.5em;
+
+    & svg {
+      margin-right: .8em;
+
+      opacity: .5;
+    }
+  }
+
+
+  &__item--active a {
+    display: block;
+
+    text-align: center;
+  }
+
+
+
+  &--opened {
+    margin-left: 70px;
+    height: 70vh;
+    background-color: $bg-brown;
+
+
+    & .main-nav__toggle {
+      left: -70px;
+      right: auto;
+
+
+      &::before {
+        top: 23px;
+
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 17px;
+        top: 23px;
+
+        width: 37px;
+        height: 2px;
+
+        background-color: $color-light;
+
+        transform: rotate(-45deg);
+      }
+
+      &:active {
+        &::before,
+        &::after {
+          background-color: $bg-lightbrown;
+        }
+      }
+    }
+
+
+    & .main-nav__item a {
+      display: block;
+    }
+
+
+    & .main-nav__item--active a {
+      text-align: left;
+    }
+
+    & .user__item a {
+      display: block;
+    }
+  }  
 }
+
