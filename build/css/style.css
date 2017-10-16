@@ -136,16 +136,68 @@ img {
     .main-nav--opened .user__item a {
       display: block; }
     @media (min-width: 768px) {
+    .page-header__logo-wrap {
+      width: 83.3%; }
   .page-header {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column; }
+            flex-direction: column;
+    background-color: #000; }
     .page-header__logo {
       -webkit-box-ordinal-group: 3;
               order: 2;
       height: 400px;
       background: url("../img/back-tablet.jpg") center top no-repeat; }
       .page-header__logo img {
-        width: 375px; } }
+        width: 375px; }
+  .main-nav {
+    width: 87.5%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+    .main-nav__toggle {
+      display: none; }
+    .main-nav__list {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
+      width: 73.6%; }
+    .main-nav__item a,
+    .main-nav .user__item a {
+      display: block;
+      background-color: #000;
+      padding: 1em 0;
+      border: none; }
+      .main-nav__item a[href]:hover,
+      .main-nav .user__item a[href]:hover {
+        background-color: #000;
+        color: #826550; }
+      .main-nav__item a[href]:active,
+      .main-nav .user__item a[href]:active {
+        background-color: #000;
+        color: #fff;
+        opacity: .5; }
+    .main-nav__item--active a {
+      position: relative; }
+      .main-nav__item--active a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #826550; }
+    .main-nav .user__item a {
+      width: 50px;
+      padding: 1.3rem 0;
+      font-size: 0; }
+      .main-nav .user__item a:hover svg {
+        opacity: .3; } }
+    @media (min-width: 768px) and (min-width: 768px) {
+    .main-nav {
+      width: 83.3%; } }
