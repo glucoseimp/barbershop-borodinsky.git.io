@@ -68,6 +68,8 @@
 
     padding: .75em 1.5em;
 
+    cursor: pointer;
+
 
     &[href]:hover {
       background-color: #755a46;
@@ -242,6 +244,45 @@
 
       &:hover svg {
         opacity: .3;
+      }
+    }
+  }
+}
+
+
+@media ($desktop-width) {
+  .main-nav {
+
+
+    &__item a,
+    & .user__item a {
+      padding: 1.5em 1.8em;
+    }
+
+    &__item--active a {
+
+      &::before {
+        left: 1.8em;
+        right: 1.8em;
+        width: auto;
+      }
+    }
+
+    & .user__item a {
+      font: {
+        size: 1rem;
+        weight: 700;
+      }
+
+      margin-top: -1em;
+      text-transform: uppercase; 
+      
+
+      & svg {
+        position: relative;
+
+        left: -2em;
+        top: 1.3em;
       }
     }
   }

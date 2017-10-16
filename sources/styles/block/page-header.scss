@@ -36,3 +36,22 @@
     } 
   }
 }
+
+
+@media ($desktop-width) {
+  .page-header {
+
+    &__logo {
+      height: 650px;
+
+      padding-top: 2em;
+
+      background: url('../img/back-desktop.jpg') center top no-repeat;
+
+
+      & img {
+        width: 380px;
+      }
+    }
+  }
+}
