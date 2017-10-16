@@ -201,3 +201,10 @@ img {
     @media (min-width: 768px) and (min-width: 768px) {
     .main-nav {
       width: 83.3%; } }
+    @media (min-width: 1200px) {
+  .page-header__logo {
+    height: 650px;
+    padding-top: 2em;
+    background: url("../img/back-desktop.jpg") center top no-repeat; }
+    .page-header__logo img {
+      width: 380px; } }
