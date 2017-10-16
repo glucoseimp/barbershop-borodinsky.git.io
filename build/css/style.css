@@ -83,7 +83,8 @@ img {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    padding: .75em 1.5em; }
+    padding: .75em 1.5em;
+    cursor: pointer; }
     .main-nav__item a[href]:hover {
       background-color: #755a46; }
     .main-nav__item a[href]:active {
@@ -202,9 +203,30 @@ img {
     .main-nav {
       width: 83.3%; } }
     @media (min-width: 1200px) {
+    .page-header__logo-wrap {
+      width: 80%; }
   .page-header__logo {
     height: 650px;
     padding-top: 2em;
     background: url("../img/back-desktop.jpg") center top no-repeat; }
     .page-header__logo img {
-      width: 380px; } }
+      width: 380px; }
+  .main-nav__item a,
+  .main-nav .user__item a {
+    padding: 1.5em 1.8em; }
+  .main-nav__item--active a::before {
+    left: 1.8em;
+    right: 1.8em;
+    width: auto; }
+  .main-nav .user__item a {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: -1em;
+    text-transform: uppercase; }
+    .main-nav .user__item a svg {
+      position: relative;
+      left: -2em;
+      top: 1.3em; } }
+    @media (min-width: 768px) and (min-width: 1200px) {
+    .main-nav {
+      width: 80%; } }
