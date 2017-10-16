@@ -1,0 +1,57 @@
+.page-header {
+  &__logo-wrap {
+    @include container;
+
+    padding: 2em 0;
+
+    text-align: center;
+
+
+    & img {
+      width: 230px;
+    }
+  }
+}
+
+
+@media ($tablet-width) {
+  .page-header {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $color-dark;
+
+    &__logo {
+      order: 2;
+
+      height: 400px;
+
+      background: url('../img/back-tablet.jpg') center top no-repeat;
+
+
+
+      & img {
+        width: 375px;
+      }
+    } 
+  }
+}
+
+
+@media ($desktop-width) {
+  .page-header {
+
+    &__logo {
+      height: 650px;
+
+      padding-top: 2em;
+
+      background: url('../img/back-desktop.jpg') center top no-repeat;
+
+
+      & img {
+        width: 380px;
+      }
+    }
+  }
+}

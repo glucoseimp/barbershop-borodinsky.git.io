@@ -1,0 +1,289 @@
+.main-nav {
+  position: relative;
+
+
+  &__toggle {
+    position: absolute;
+    right: 0;
+
+    width: 70px;
+    height: 50px;
+
+    background-color: $bg-brown;
+
+    border: none;
+    outline: none;
+
+    font-size: 0;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 17px;
+      top: 15px;
+
+      width: 37px;
+      height: 2px;
+
+      background-color: $color-light;
+      box-shadow: 0 8px $color-light,
+                  0 16px $color-light;
+    }
+
+
+    &:hover {
+      background-color: $bg-darkbrown;
+    }
+
+    &:active {
+      &::before {
+        background-color: $bg-lightbrown;
+        box-shadow: 0 8px $bg-lightbrown,
+                    0 16px $bg-lightbrown;
+      }
+    }
+  }
+
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item a {
+    display: none;
+
+    background-color: $bg-lightbrown;
+    border-bottom: 1px solid $bg-brown;
+
+    color: $color-light;
+    font-weight: 700;
+    text: {
+      transform: uppercase;
+      decoration: none;
+    }
+
+    padding: .75em 1.5em;
+
+    cursor: pointer;
+
+
+    &[href]:hover {
+      background-color: #755a46;
+    }
+
+
+    &[href]:active {
+      background-color: $bg-brown;
+      color: $bg-lightbrown;
+    }
+  }
+
+
+  & .user__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+
+  & .user__item a {
+    display: none;
+
+    background-color: $bg-brown;
+
+    color: $color-light;
+    text-decoration: none;
+
+    padding: .75em 1.5em;
+
+    & svg {
+      margin-right: .8em;
+
+      opacity: .5;
+    }
+  }
+
+
+  &__item--active a {
+    display: block;
+
+    text-align: center;
+  }
+
+
+
+  &--opened {
+    margin-left: 70px;
+    height: 70vh;
+    background-color: $bg-brown;
+
+
+    & .main-nav__toggle {
+      left: -70px;
+      right: auto;
+
+
+      &::before {
+        top: 23px;
+
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 17px;
+        top: 23px;
+
+        width: 37px;
+        height: 2px;
+
+        background-color: $color-light;
+
+        transform: rotate(-45deg);
+      }
+
+      &:active {
+        &::before,
+        &::after {
+          background-color: $bg-lightbrown;
+        }
+      }
+    }
+
+
+    & .main-nav__item a {
+      display: block;
+    }
+
+
+    & .main-nav__item--active a {
+      text-align: left;
+    }
+
+    & .user__item a {
+      display: block;
+    }
+  }  
+}
+
+
+@media ($tablet-width) {
+  .main-nav {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__toggle {
+      display: none;
+    }
+
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+
+      width: 73.6%;
+    }
+
+
+    &__item a,
+    & .user__item a {
+      display: block;      
+
+      background-color: $color-dark;
+
+      padding: 1em 0;
+
+      border: none;
+
+
+      &[href]:hover {
+        background-color: $color-dark;
+        color: $bg-lightbrown;
+      }
+
+      
+      &[href]:active {
+        background-color: $color-dark;
+        color: $color-light;
+        opacity: .5;
+      }
+    }
+
+    &__item--active a {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: $bg-lightbrown;
+      }
+    }
+
+
+    & .user__item a {
+      width: 50px;
+      padding: 1.3rem 0;
+      font-size: 0;
+
+
+      &:hover svg {
+        opacity: .3;
+      }
+    }
+  }
+}
+
+
+@media ($desktop-width) {
+  .main-nav {
+
+
+    &__item a,
+    & .user__item a {
+      padding: 1.5em 1.8em;
+    }
+
+    &__item--active a {
+
+      &::before {
+        left: 1.8em;
+        right: 1.8em;
+        width: auto;
+      }
+    }
+
+    & .user__item a {
+      font: {
+        size: 1rem;
+        weight: 700;
+      }
+
+      margin-top: -1em;
+      text-transform: uppercase; 
+      
+
+      & svg {
+        position: relative;
+
+        left: -2em;
+        top: 1.3em;
+      }
+    }
+  }
+}
