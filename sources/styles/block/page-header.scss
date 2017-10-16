@@ -1,0 +1,14 @@
+.page-header {
+  &__logo-wrap {
+    @include container;
+
+    padding: 2em 0;
+
+    text-align: center;
+
+
+    & img {
+      width: 230px;
+    }
+  }
+}
