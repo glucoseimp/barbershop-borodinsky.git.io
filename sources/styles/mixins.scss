@@ -1,4 +1,9 @@
 @mixin container {
   width: 87.5%;
   margin: 0 auto;
+
+
+  @media ($tablet-width) {
+    width: 83.3%;
+  }
 }

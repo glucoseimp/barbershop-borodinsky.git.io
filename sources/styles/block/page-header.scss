@@ -12,3 +12,27 @@
     }
   }
 }
+
+
+@media ($tablet-width) {
+  .page-header {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $color-dark;
+
+    &__logo {
+      order: 2;
+
+      height: 400px;
+
+      background: url('../img/back-tablet.jpg') center top no-repeat;
+
+
+
+      & img {
+        width: 375px;
+      }
+    } 
+  }
+}
