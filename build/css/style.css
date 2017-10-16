@@ -135,3 +135,17 @@ img {
       text-align: left; }
     .main-nav--opened .user__item a {
       display: block; }
+    @media (min-width: 768px) {
+  .page-header {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column; }
+    .page-header__logo {
+      -webkit-box-ordinal-group: 3;
+              order: 2;
+      height: 400px;
+      background: url("../img/back-tablet.jpg") center top no-repeat; }
+      .page-header__logo img {
+        width: 375px; } }
